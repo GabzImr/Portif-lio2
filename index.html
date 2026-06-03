@@ -191,21 +191,26 @@
       margin-bottom: 25px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 16px 35px;
-      background: white;
-      color: black;
-      border-radius: 18px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s ease;
-    }
+   .btn,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: transparent;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
 
-    .btn:hover {
-      transform: scale(1.05);
-    }
-
+.btn:hover,
+.btn-secondary:hover {
+  border-color: white;
+  transform: translateY(-3px);
+}
     
 
     .projects,
@@ -588,6 +593,128 @@
     filter: hue-rotate(360deg);
   }
 }
+.education {
+  padding: 120px 10%;
+}
+
+.education-container {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.education-cards {
+  flex: 1;
+  min-width: 320px;
+}
+
+.education-card {
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  padding: 30px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+
+.education-card h3 {
+  margin-bottom: 10px;
+}
+
+.education-card p {
+  color: #999;
+}
+
+.timeline {
+  flex: 1;
+  min-width: 300px;
+  border-left: 2px solid #333;
+  padding-left: 30px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item span {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  left: -39px;
+  top: 5px;
+}
+
+.timeline-item p {
+  color: #999;
+}
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.contact-info {
+  background: #0d0d0d;
+  padding: 35px;
+  border-radius: 25px;
+  border: 1px solid #1a1a1a;
+}
+
+.contact-info p {
+  margin-top: 20px;
+  color: #aaa;
+}
+
+.social-links {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  padding: 18px;
+  border-radius: 15px;
+  color: white;
+}
+
+.contact-form textarea {
+  min-height: 180px;
+  resize: none;
+}
+.project-preview {
+  width: 100%;
+  margin-top: 25px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #222;
+}
+
+.project-preview img {
+  width: 100%;
+  display: block;
+  transition: 0.4s ease;
+}
+
+.project-preview img:hover {
+  transform: scale(1.03);
+}
   </style>
 </head>
 <body>
@@ -629,7 +756,7 @@
     <div class="about-container">
 
       <div class="about-image">
-        <img src="eu.jpg" alt="profile">
+        <img src="img/eu.jpg" alt="profile">
       </div>
 
       <div class="about-text">
@@ -666,10 +793,24 @@
         <h3>Cartas e caminhos- teste de personalidade</h3>
 
         <p>
-           O Impacto das Experiências Cotidianas e um Jogo como Ferramenta de Reflexão. O presente Trabalho de Conclusão de Curso tem como tema o desenvolvimento de um jogo de teste de personalidade ambientado na rotina de um carteiro em pixel art. O projeto integra narrativa interativa, gamificação e psicologia comportamental para representar situações cotidianas que exigem habilidades socioemocionais aplicadas ao ambiente de trabalho.
+           O Impacto das Experiências Cotidianas e um Jogo como Ferramenta de Reflexão. O Trabalho de Conclusão de Curso tem como tema o desenvolvimento de um jogo de teste de personalidade ambientado na rotina de um carteiro em pixel art. O projeto integra narrativa interativa, gamificação e psicologia comportamental para representar situações cotidianas que exigem habilidades socioemocionais aplicadas ao ambiente de trabalho.
         </p>
 
-        <a href="https://gabzimr.github.io/TCCcartasdaempatia/" class="btn">Ver</a>
+        
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+
+  <a href="https://gabzimr.github.io/TCCcartasdaempatia/" class="btn">
+    Ver Projeto
+  </a>
+
+  <a href="https://github.com/GabzImr/TCCcartasdaempatia" class="btn-secondary">
+    Informações
+  </a>
+
+</div>
+<div class="project-preview">
+  <img src="img/cartas.jpg" alt="Cartas e Caminhos">
+</div>
       </div>
 
       <div class="project-card">
@@ -681,8 +822,23 @@
           uma interface intuitiva e organizada, permitindo a interação do usuário com 
           funcionalidades comuns a um ambiente de biblioteca digital.
         </p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
 
-        <a href="https://github.com/GabzImr/bibliotecavirtual" class="btn">Ver</a>
+  <a href="LINK_DEMO" class="btn">
+    Ver Projeto
+  </a>
+
+  <a href="https://github.com/GabzImr/bibliotecavirtual" class="btn">
+    Informações
+  </a>
+
+</div>
+
+<div class="project-preview">
+  <img src="img/archivra.jpg" alt="Archivra">
+</div>
+
+        
       </div>
 
       <div class="project-card">
@@ -691,59 +847,124 @@
         <p>
           Projeto moderno desenvolvido com Vite + React focado em performance, responsividade e experiência do usuário. A aplicação combina uma interface dinâmica com design moderno, criando uma navegação fluida e intuitiva para diferentes dispositivos.
         </p>
+       <div style="display:flex; gap:12px; flex-wrap:wrap;">
 
-        <a href="https://github.com/GabzImr/vite-react" class="btn">Ver</a>
+  <a href="LINK_DEMO" class="btn">
+    Ver Projeto
+  </a>
+
+  <a href="https://github.com/GabzImr/vite-react" class="btn">
+    Informações
+  </a>
+
+</div>
+
+<div class="project-preview">
+  <img src="img/vite-react.jpg" alt="Projeto React">
+</div>
+    </div>
+  </section>
+
+  <section class="education" id="education">
+
+  <div class="section-title">
+    <small>Formação</small>
+    <h2>Formação e Cursos</h2>
+  </div>
+
+  <div class="education-container">
+
+    <div class="education-cards">
+
+      <div class="education-card">
+        <h3>Técnico em Desenvolvimento de Sistemas</h3>
+        <p>Fundamentos de Bancos de Dados, Tecnologias da Informação, Lógica de Programação,		
+         Eletroeletrônica Aplicada, Redes de Computadores e Programação de Aplicativos, Desenvolvimento de Sistemas, Modelagem de Sistemas, Teste de Sistemas, Implantação de Sistemas e Manutenção de Sistemas.</p>
+      </div>
+
+      <div class="education-card">
+        <h3>Bacharelado em Engenharia de Software</h3>
+        <p>Em andamento</p>
       </div>
 
     </div>
-  </section>
 
-  
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <span></span>
+        <h4>2025</h4>
+        <p>Concluído</p>
+      </div>
+
+      <div class="timeline-item">
+<span></span>
+      </div>
+
+      <div class="timeline-item">
+        <span></span>
+        <h4>2026 - 2029</h4>
+        <p>Graduação em andamento</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
     
 
-  <section class="contact" id="contact">
-    <div class="section-title">
-      <small>Contato</small>
-      <h2>Conecte-se comigo</h2>
-    </div>
+ <section class="contact" id="contact">
 
-    <div class="contact-grid">
+  <div class="section-title">
+    <small>Contato</small>
+    <h2>Conecte-se comigo</h2>
+  </div>
 
-      <a href="" class="contact-card">
-        <h3>
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" class="contact-icon">
-          Gmail
-        </h3>
-        <p>loopzerogb@gmail.com</p>
-      </a>
+  <div class="contact-wrapper">
 
-      <a href="https://www.linkedin.com/in/gabriela-z-92077b32b/" target="_blank" class="contact-card">
-        <h3>
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="contact-icon">
-          LinkedIn
-        </h3>
-        <p>LinkedIn</p>
-      </a>
+    <div class="contact-info">
 
-      <a href="https://github.com/GabzImr" target="_blank" class="contact-card">
-        <h3>
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="contact-icon">
+      <h3>Informações</h3>
+
+      <p><strong>Email:</strong><br>
+      loopzerogb@gmail.com</p>
+
+      <p><strong>WhatsApp:</strong><br>
+      (41) 98466-0596</p>
+
+      <div class="social-links">
+
+        <a href="https://github.com/GabzImr" target="_blank">
           GitHub
-        </h3>
-        <p>GitHub</p>
-      </a>
+        </a>
 
-      <a href="" target="_blank" class="contact-card">
-        <h3>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="contact-icon">
-          WhatsApp
-        </h3>
-        <p>41 984660596</p>
-      </a>
+        <a href="https://www.linkedin.com/in/gabriela-z-92077b32b/" target="_blank">
+          LinkedIn
+        </a>
+
+      </div>
 
     </div>
-  </section>
+
+    <form class="contact-form">
+
+      <input type="text" placeholder="Seu nome">
+
+      <input type="email" placeholder="Seu email">
+
+      <textarea placeholder="Digite sua mensagem"></textarea>
+
+      <button type="submit" class="btn">
+        Enviar
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
 
   <footer>
     © 2026 Gabriela Portfólio — All Rights Reserved
