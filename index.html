@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gabriela Moreira da Silva Zakovicz</title>
+  
+
 
   <style>
     * {
@@ -95,11 +97,27 @@
     }
 
    .hero h1 {
-   font-size: clamp(30px, 7vw, 70px);
-   letter-spacing: 3px;
-   margin-bottom: 20px;
-   max-width: 1000px;
-   line-height: 1.1;
+  font-family: "PT Serif", serif;
+  font-size: clamp(35px, 7vw, 75px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+  max-width: 1000px;
+  line-height: 1.1;
+
+  opacity: 0;
+  transform: translateY(40px);
+  animation: titleReveal 1.2s ease forwards;
+
+  text-shadow: 0 0 30px rgba(255,255,255,0.15);
+}
+.hero h1:hover {
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.3),
+    0 0 30px rgba(255,255,255,0.2);
+
+  transform: scale(1.02);
+  transition: 0.4s;
 }
 
     .hero p {
@@ -135,7 +153,7 @@
     .scroll {
       position: absolute;
       bottom: 30px;
-      color: #666;
+      color: #940000;
       letter-spacing: 4px;
       animation: bounce 2s infinite;
     }
@@ -173,13 +191,14 @@
     }
 
     .about-text small {
-      color: #666;
+      color: #940000;
       letter-spacing: 5px;
       text-transform: uppercase;
     }
 
     .about-text h2 {
-    font-size: clamp(20px, 5vw, 35px);
+    
+    font-family: "PT Serif", serif;
     margin: 10px 0;
     line-height: 1.2;
     }
@@ -224,13 +243,13 @@
     }
 
     .section-title small {
-      color: #666;
+      color: #940000;
       letter-spacing: 5px;
       text-transform: uppercase;
     }
 
     .section-title h2 {
-    font-size: clamp(30px, 5vw, 40px);
+    font-family: "PT Serif", serif;
     margin-top: 15px;
     line-height: 1.1;
    }
@@ -258,10 +277,19 @@
     }
 
     .project-card h3,
-    .editing-card h3 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
+.editing-card h3 {
+  
+  font-family: "PT Serif", serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.project-card:hover h3 {
+  transform: translateX(5px);
+}
 
     .project-card p,
     .editing-card p {
@@ -618,6 +646,9 @@
 }
 
 .education-card h3 {
+  font-family: "PT Serif", serif;
+  font-size: 25px;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -714,6 +745,27 @@
 
 .project-preview img:hover {
   transform: scale(1.03);
+}
+@keyframes titleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    letter-spacing: 15px;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: -2px;
+  }
+}
+.about-text p,
+.project-card p,
+.editing-card p,
+.education-card p,
+.timeline-item p,
+.contact-info p {
+  font-family: "Satisfy", cursive;
 }
   </style>
 </head>
